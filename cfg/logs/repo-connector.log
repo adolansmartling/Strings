@@ -1,0 +1,25 @@
+2017-02-01 09:36:53,283 INFO {RepoConnector.java:80} [--] Repo connector version is 1.5.4
+2017-02-01 09:36:53,287 INFO {RepoConnector.java:82} [--] Configuration is cfg
+2017-02-01 09:36:55,281 INFO {RepositoryFactoryImpl.java:50} [--] Repository factory configuration are reading...
+2017-02-01 09:36:55,283 INFO {RepositoryFactoryImpl.java:56} [--] Repository factory configuration are read successfully. There are 6 specific connectors
+2017-02-01 09:36:55,286 INFO {ConfigRepositoryDataProviderImpl.java:85} [--] Repository configurations are reading...
+2017-02-01 09:36:55,344 INFO {ConfigRepositoryDataProviderImpl.java:126} [--] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] are added, alias github_test, project f410dbb3c, auth type USER_PASSWORD
+2017-02-01 09:36:55,352 INFO {ConfigRepositoryDataProviderImpl.java:128} [--] Repository configurations are read successfully. There are 1 repositories
+2017-02-01 09:36:56,781 WARN {BrokerService.java:1982} [--] Memory Usage for the Broker (1024 mb) is more than the maximum available for the JVM: 247 mb - resetting to 70% of maximum available: 173 mb
+2017-02-01 09:36:56,783 WARN {BrokerService.java:2004} [--] Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\aaron\Documents\GitHub\Strings\cfg\activemq-data\localhost\KahaDB only has 77391 mb of usable space - resetting to maximum available disk space: 77391 mb
+2017-02-01 09:36:56,834 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Smartling2VcsImporterImpl@164c546 is assigned to handle class com.smartling.repoconnector.model.TranslationImportRequest data
+2017-02-01 09:36:56,838 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Vcs2SmartlingImporterImpl@8b87aa is assigned to handle class com.smartling.repoconnector.model.PushImportRequest data
+2017-02-01 09:36:57,065 INFO {BrokerManager.java:89} [--] Repository Connector is starting
+2017-02-01 09:36:57,065 INFO {ActiveMQProvider.java:45} [--] Queue is started
+2017-02-01 09:36:57,700 INFO {HTTPSJerseyListener.java:68} [--] HTTP listener is started on http://0.0.0.0:5555
+2017-02-01 09:36:57,710 INFO {BrokerManager.java:95} [--] Metrics reposter is started. Output dir: cfg\metrics
+2017-02-01 09:36:57,711 INFO {BrokerManager.java:97} [--] Repository Connector successfully started
+2017-02-01 09:36:57,713 INFO {RepoConnector.java:164} [--] Repository Connector is starting
+2017-02-01 09:36:57,713 INFO {RepoConnector.java:165} [--] Checking health...
+2017-02-01 09:36:57,716 INFO {RepoConnector.java:262} [--] ActiveMQProvider is OK, parameters {handledConnections=0, connections=0, uptime=1.320 seconds}
+2017-02-01 09:36:57,717 INFO {RepoConnector.java:262} [--] HTTPSJerseyListener is OK
+2017-02-01 09:36:59,095 INFO {GitRepositoryConnector.java:325} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository is accessible
+2017-02-01 09:37:00,579 INFO {RepoConnector.java:262} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] is OK
+2017-02-01 09:37:00,580 INFO {RepoConnector.java:174} [--] The health is OK
+2017-02-01 09:37:00,587 INFO {RepositoryFactoryImpl.java:145} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Pooling task is scheduled with cron expression 0 */5 * * * ?
+2017-02-01 09:37:00,590 INFO {RepoConnector.java:176} [--] Periodical tasks are scheduled

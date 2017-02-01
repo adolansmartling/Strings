@@ -58,7 +58,7 @@
          {
             "type"                      : "android",
             "authorizeContent"          : "false",
-            "pathRegex"                 : "android\\/.*_en\\.xml",
+            "pathRegex"                 : "strings\/android\\/.*_en\\.xml",
             "translationPathExpression" : "${originalFile.path}${originalFile.baseName.replaceAll('_en$', '_'+locale)}.${originalFile.extension}"
          },
 

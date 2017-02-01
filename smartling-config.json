@@ -59,7 +59,7 @@
             "type"                      : "android",
             "authorizeContent"          : "false",
             "pathRegex"                 : "Strings/Android_strings_en.xml",
-            "translationPathExpression" : "${originalFile.path}${originalFile.baseName.replaceAll('_en$', '_'+locale)}.${originalFile.extension}"
+            "translationPathExpression" : "translations"
          },
 
          // Resource set includes all properties files from /web/messages/en folder and all it sub-folders.

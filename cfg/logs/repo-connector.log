@@ -170,3 +170,43 @@ java.lang.IllegalStateException: Shutdown in progress
 2017-02-01 09:54:52,323 INFO {RepoConnector.java:176} [--] Periodical tasks are scheduled
 2017-02-01 09:55:00,048 INFO {RepositoryPollingTask.java:74} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is starting...
 2017-02-01 09:55:00,435 INFO {RepositoryPollingTask.java:103} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is completed
+2017-02-01 09:57:35,300 WARN {DefaultMessageListenerContainer.java:842} [--] Setup of JMS message listener invoker failed for destination 'queue://com.smartling.repoconnector.import' - trying to recover. Cause: peer (vm://localhost#1) stopped.
+2017-02-01 09:57:35,787 ERROR {BrokerService.java:609} [--] Failed to start Apache ActiveMQ ([localhost, null], {})
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.add(Unknown Source) ~[na:1.8.0_121]
+	at java.lang.Runtime.addShutdownHook(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.activemq.broker.BrokerService.addShutdownHook(BrokerService.java:2410) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.doStartBroker(BrokerService.java:679) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.startBroker(BrokerService.java:670) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:606) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doCompositeConnect(VMTransportFactory.java:126) [activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doConnect(VMTransportFactory.java:55) [activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.TransportFactory.connect(TransportFactory.java:64) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createTransport(ActiveMQConnectionFactory.java:317) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:332) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:305) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) [activemq-client-5.11.1.jar:5.11.1]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:184) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.createSharedConnection(AbstractJmsListeningContainer.java:405) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.refreshSharedConnection(AbstractJmsListeningContainer.java:390) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:885) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.recoverAfterListenerSetupFailure(DefaultMessageListenerContainer.java:861) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1012) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_121]
+2017-02-01 09:57:37,751 INFO {RepoConnector.java:80} [--] Repo connector version is 1.5.4
+2017-02-01 09:57:37,754 INFO {RepoConnector.java:82} [--] Configuration is cfg
+2017-02-01 09:57:38,767 WARN {RepoConnector.java:129} [--] Repository Connector Stopped
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_121]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_121]
+	at com.smartling.repoconnector.RepoConnector.stop(RepoConnector.java:121) [repo-connector-1.5.4.jar:1.5.4]
+	at com.smartling.repoconnector.RepoConnector.main(RepoConnector.java:92) [repo-connector-1.5.4.jar:1.5.4]

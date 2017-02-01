@@ -30,3 +30,143 @@
 2017-02-01 09:49:17,028 INFO {RepoConnector.java:82} [--] Configuration is cfg
 2017-02-01 09:49:17,039 INFO {RepoConnector.java:125} [--] Repository Connector Stopped
 2017-02-01 09:49:17,040 INFO {BrokerManager.java:102} [--] Repository Connector is stopping
+2017-02-01 09:50:58,652 INFO {RepoConnector.java:80} [--] Repo connector version is 1.5.4
+2017-02-01 09:50:58,656 INFO {RepoConnector.java:82} [--] Configuration is cfg
+2017-02-01 09:51:00,542 INFO {RepositoryFactoryImpl.java:50} [--] Repository factory configuration are reading...
+2017-02-01 09:51:00,543 INFO {RepositoryFactoryImpl.java:56} [--] Repository factory configuration are read successfully. There are 6 specific connectors
+2017-02-01 09:51:00,547 INFO {ConfigRepositoryDataProviderImpl.java:85} [--] Repository configurations are reading...
+2017-02-01 09:51:00,600 INFO {ConfigRepositoryDataProviderImpl.java:126} [--] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] are added, alias github_test, project f410dbb3c, auth type USER_PASSWORD
+2017-02-01 09:51:00,607 INFO {ConfigRepositoryDataProviderImpl.java:128} [--] Repository configurations are read successfully. There are 1 repositories
+2017-02-01 09:51:02,871 WARN {BrokerService.java:1982} [--] Memory Usage for the Broker (1024 mb) is more than the maximum available for the JVM: 247 mb - resetting to 70% of maximum available: 173 mb
+2017-02-01 09:51:02,872 WARN {BrokerService.java:2004} [--] Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\aaron\Documents\GitHub\Strings\cfg\activemq-data\localhost\KahaDB only has 77380 mb of usable space - resetting to maximum available disk space: 77380 mb
+2017-02-01 09:51:02,904 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Smartling2VcsImporterImpl@e2f720 is assigned to handle class com.smartling.repoconnector.model.TranslationImportRequest data
+2017-02-01 09:51:02,909 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Vcs2SmartlingImporterImpl@1572c37 is assigned to handle class com.smartling.repoconnector.model.PushImportRequest data
+2017-02-01 09:51:03,062 INFO {BrokerManager.java:89} [--] Repository Connector is starting
+2017-02-01 09:51:03,063 INFO {ActiveMQProvider.java:45} [--] Queue is started
+2017-02-01 09:51:03,724 INFO {HTTPSJerseyListener.java:68} [--] HTTP listener is started on http://0.0.0.0:5555
+2017-02-01 09:51:03,740 INFO {BrokerManager.java:95} [--] Metrics reposter is started. Output dir: cfg\metrics
+2017-02-01 09:51:03,740 INFO {BrokerManager.java:97} [--] Repository Connector successfully started
+2017-02-01 09:51:03,740 INFO {RepoConnector.java:164} [--] Repository Connector is starting
+2017-02-01 09:51:03,740 INFO {RepoConnector.java:165} [--] Checking health...
+2017-02-01 09:51:03,742 INFO {RepoConnector.java:262} [--] ActiveMQProvider is OK, parameters {handledConnections=0, connections=0, uptime=2.087 seconds}
+2017-02-01 09:51:03,742 INFO {RepoConnector.java:262} [--] HTTPSJerseyListener is OK
+2017-02-01 09:51:04,601 INFO {GitRepositoryConnector.java:325} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository is accessible
+2017-02-01 09:51:06,051 INFO {RepoConnector.java:262} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] is OK
+2017-02-01 09:51:06,052 INFO {RepoConnector.java:174} [--] The health is OK
+2017-02-01 09:51:06,059 INFO {RepositoryFactoryImpl.java:145} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Pooling task is scheduled with cron expression 0 */5 * * * ?
+2017-02-01 09:51:06,062 INFO {RepoConnector.java:176} [--] Periodical tasks are scheduled
+2017-02-01 09:53:21,708 WARN {DefaultMessageListenerContainer.java:842} [--] Setup of JMS message listener invoker failed for destination 'queue://com.smartling.repoconnector.import' - trying to recover. Cause: peer (vm://localhost#1) stopped.
+2017-02-01 09:53:21,823 ERROR {BrokerService.java:609} [--] Failed to start Apache ActiveMQ ([localhost, null], {})
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.add(Unknown Source) ~[na:1.8.0_121]
+	at java.lang.Runtime.addShutdownHook(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.activemq.broker.BrokerService.addShutdownHook(BrokerService.java:2410) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.doStartBroker(BrokerService.java:679) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.startBroker(BrokerService.java:670) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:606) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doCompositeConnect(VMTransportFactory.java:126) [activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doConnect(VMTransportFactory.java:55) [activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.TransportFactory.connect(TransportFactory.java:64) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createTransport(ActiveMQConnectionFactory.java:317) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:332) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:305) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) [activemq-client-5.11.1.jar:5.11.1]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:184) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.createSharedConnection(AbstractJmsListeningContainer.java:405) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.refreshSharedConnection(AbstractJmsListeningContainer.java:390) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:885) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.recoverAfterListenerSetupFailure(DefaultMessageListenerContainer.java:861) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1012) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_121]
+2017-02-01 09:53:25,047 INFO {RepoConnector.java:80} [--] Repo connector version is 1.5.4
+2017-02-01 09:53:25,052 INFO {RepoConnector.java:82} [--] Configuration is cfg
+2017-02-01 09:53:26,064 WARN {RepoConnector.java:129} [--] Repository Connector Stopped
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_121]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_121]
+	at java.net.Socket.<init>(Unknown Source) ~[na:1.8.0_121]
+	at com.smartling.repoconnector.RepoConnector.stop(RepoConnector.java:121) [repo-connector-1.5.4.jar:1.5.4]
+	at com.smartling.repoconnector.RepoConnector.main(RepoConnector.java:92) [repo-connector-1.5.4.jar:1.5.4]
+2017-02-01 09:54:30,950 INFO {RepoConnector.java:80} [--] Repo connector version is 1.5.4
+2017-02-01 09:54:30,953 INFO {RepoConnector.java:82} [--] Configuration is cfg
+2017-02-01 09:54:32,852 INFO {RepositoryFactoryImpl.java:50} [--] Repository factory configuration are reading...
+2017-02-01 09:54:32,854 INFO {RepositoryFactoryImpl.java:56} [--] Repository factory configuration are read successfully. There are 6 specific connectors
+2017-02-01 09:54:32,857 INFO {ConfigRepositoryDataProviderImpl.java:85} [--] Repository configurations are reading...
+2017-02-01 09:54:32,908 INFO {ConfigRepositoryDataProviderImpl.java:126} [--] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] are added, alias github_test, project f410dbb3c, auth type USER_PASSWORD
+2017-02-01 09:54:32,914 INFO {ConfigRepositoryDataProviderImpl.java:128} [--] Repository configurations are read successfully. There are 1 repositories
+2017-02-01 09:54:35,230 WARN {BrokerService.java:1982} [--] Memory Usage for the Broker (1024 mb) is more than the maximum available for the JVM: 247 mb - resetting to 70% of maximum available: 173 mb
+2017-02-01 09:54:35,232 WARN {BrokerService.java:2004} [--] Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\aaron\Documents\GitHub\Strings\cfg\activemq-data\localhost\KahaDB only has 77347 mb of usable space - resetting to maximum available disk space: 77347 mb
+2017-02-01 09:54:35,289 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Smartling2VcsImporterImpl@f07f02 is assigned to handle class com.smartling.repoconnector.model.TranslationImportRequest data
+2017-02-01 09:54:35,293 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Vcs2SmartlingImporterImpl@f8f5a8 is assigned to handle class com.smartling.repoconnector.model.PushImportRequest data
+2017-02-01 09:54:35,424 INFO {BrokerManager.java:89} [--] Repository Connector is starting
+2017-02-01 09:54:35,425 INFO {ActiveMQProvider.java:45} [--] Queue is started
+2017-02-01 09:54:35,953 INFO {HTTPSJerseyListener.java:68} [--] HTTP listener is started on http://0.0.0.0:5555
+2017-02-01 09:54:35,966 INFO {BrokerManager.java:95} [--] Metrics reposter is started. Output dir: cfg\metrics
+2017-02-01 09:54:35,966 INFO {BrokerManager.java:97} [--] Repository Connector successfully started
+2017-02-01 09:54:35,967 INFO {RepoConnector.java:164} [--] Repository Connector is starting
+2017-02-01 09:54:35,968 INFO {RepoConnector.java:165} [--] Checking health...
+2017-02-01 09:54:35,969 INFO {RepoConnector.java:262} [--] ActiveMQProvider is OK, parameters {handledConnections=0, connections=0, uptime=1.947 seconds}
+2017-02-01 09:54:35,970 INFO {RepoConnector.java:262} [--] HTTPSJerseyListener is OK
+2017-02-01 09:54:36,791 INFO {GitRepositoryConnector.java:325} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository is accessible
+2017-02-01 09:54:38,233 INFO {RepoConnector.java:262} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] is OK
+2017-02-01 09:54:38,407 INFO {RepoConnector.java:174} [--] The health is OK
+2017-02-01 09:54:38,418 INFO {RepositoryFactoryImpl.java:145} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Pooling task is scheduled with cron expression 0 */5 * * * ?
+2017-02-01 09:54:38,422 INFO {RepoConnector.java:176} [--] Periodical tasks are scheduled
+2017-02-01 09:54:42,408 WARN {DefaultMessageListenerContainer.java:842} [--] Setup of JMS message listener invoker failed for destination 'queue://com.smartling.repoconnector.import' - trying to recover. Cause: peer (vm://localhost#1) stopped.
+2017-02-01 09:54:42,844 ERROR {BrokerService.java:609} [--] Failed to start Apache ActiveMQ ([localhost, null], {})
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.add(Unknown Source) ~[na:1.8.0_121]
+	at java.lang.Runtime.addShutdownHook(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.activemq.broker.BrokerService.addShutdownHook(BrokerService.java:2410) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.doStartBroker(BrokerService.java:679) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.startBroker(BrokerService.java:670) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:606) ~[activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doCompositeConnect(VMTransportFactory.java:126) [activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.vm.VMTransportFactory.doConnect(VMTransportFactory.java:55) [activemq-broker-5.11.1.jar:5.11.1]
+	at org.apache.activemq.transport.TransportFactory.connect(TransportFactory.java:64) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createTransport(ActiveMQConnectionFactory.java:317) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:332) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:305) [activemq-client-5.11.1.jar:5.11.1]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) [activemq-client-5.11.1.jar:5.11.1]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:184) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.createSharedConnection(AbstractJmsListeningContainer.java:405) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.refreshSharedConnection(AbstractJmsListeningContainer.java:390) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:885) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer.recoverAfterListenerSetupFailure(DefaultMessageListenerContainer.java:861) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1012) [spring-jms-3.2.13.RELEASE.jar:3.2.13.RELEASE]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_121]
+2017-02-01 09:54:45,350 INFO {RepoConnector.java:80} [--] Repo connector version is 1.5.4
+2017-02-01 09:54:45,354 INFO {RepoConnector.java:82} [--] Configuration is cfg
+2017-02-01 09:54:47,288 INFO {RepositoryFactoryImpl.java:50} [--] Repository factory configuration are reading...
+2017-02-01 09:54:47,289 INFO {RepositoryFactoryImpl.java:56} [--] Repository factory configuration are read successfully. There are 6 specific connectors
+2017-02-01 09:54:47,292 INFO {ConfigRepositoryDataProviderImpl.java:85} [--] Repository configurations are reading...
+2017-02-01 09:54:47,345 INFO {ConfigRepositoryDataProviderImpl.java:126} [--] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] are added, alias github_test, project f410dbb3c, auth type USER_PASSWORD
+2017-02-01 09:54:47,352 INFO {ConfigRepositoryDataProviderImpl.java:128} [--] Repository configurations are read successfully. There are 1 repositories
+2017-02-01 09:54:49,477 WARN {BrokerService.java:1982} [--] Memory Usage for the Broker (1024 mb) is more than the maximum available for the JVM: 247 mb - resetting to 70% of maximum available: 173 mb
+2017-02-01 09:54:49,478 WARN {BrokerService.java:2004} [--] Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\aaron\Documents\GitHub\Strings\cfg\activemq-data\localhost\KahaDB only has 77347 mb of usable space - resetting to maximum available disk space: 77347 mb
+2017-02-01 09:54:49,511 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Smartling2VcsImporterImpl@f07f02 is assigned to handle class com.smartling.repoconnector.model.TranslationImportRequest data
+2017-02-01 09:54:49,515 INFO {QueueImportDataListener.java:45} [--] Importer com.smartling.repoconnector.services.importer.Vcs2SmartlingImporterImpl@f8f5a8 is assigned to handle class com.smartling.repoconnector.model.PushImportRequest data
+2017-02-01 09:54:49,653 INFO {BrokerManager.java:89} [--] Repository Connector is starting
+2017-02-01 09:54:49,654 INFO {ActiveMQProvider.java:45} [--] Queue is started
+2017-02-01 09:54:50,194 INFO {HTTPSJerseyListener.java:68} [--] HTTP listener is started on http://0.0.0.0:5555
+2017-02-01 09:54:50,209 INFO {BrokerManager.java:95} [--] Metrics reposter is started. Output dir: cfg\metrics
+2017-02-01 09:54:50,209 INFO {BrokerManager.java:97} [--] Repository Connector successfully started
+2017-02-01 09:54:50,209 INFO {RepoConnector.java:164} [--] Repository Connector is starting
+2017-02-01 09:54:50,210 INFO {RepoConnector.java:165} [--] Checking health...
+2017-02-01 09:54:50,211 INFO {RepoConnector.java:262} [--] ActiveMQProvider is OK, parameters {handledConnections=0, connections=0, uptime=1.822 seconds}
+2017-02-01 09:54:50,211 INFO {RepoConnector.java:262} [--] HTTPSJerseyListener is OK
+2017-02-01 09:54:50,992 INFO {GitRepositoryConnector.java:325} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository is accessible
+2017-02-01 09:54:52,308 INFO {RepoConnector.java:262} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-] Repository RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>] is OK
+2017-02-01 09:54:52,309 INFO {RepoConnector.java:174} [--] The health is OK
+2017-02-01 09:54:52,318 INFO {RepositoryFactoryImpl.java:145} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Pooling task is scheduled with cron expression 0 */5 * * * ?
+2017-02-01 09:54:52,323 INFO {RepoConnector.java:176} [--] Periodical tasks are scheduled
+2017-02-01 09:55:00,048 INFO {RepositoryPollingTask.java:74} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is starting...
+2017-02-01 09:55:00,435 INFO {RepositoryPollingTask.java:103} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is completed

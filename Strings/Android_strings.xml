@@ -1,0 +1,17 @@
+<resources>
+    <string name="change_password">Change Password</string>
+    <string name="change_password_incorrect">The current password you entered is incorrect</string>
+    <string name="internet_needed">You need an internet connection to perform this action</string>
+    <string name="suggested_users_start">"Similar  "</string>
+    <string name="list_seperator">",  "</string>
+    <string name="list_seperator_end">" and  "</string>
+    <string name="community_no_suggested_users">No suggested users</string>
+    <string name="community_close_you_should_follow_warning">This action will disable the option \'Suggest me users to follow\' from your social settings. Are you sure to proceed?</string>
+    <string name="login_not_registered">You have not yet created an account with those details</string>
+    <string name="no_internet">You are not connected to the internet</string>
+    <string name="login_details_incorrect">The email/password you entered are incorrect</string>
+    <string name="profile_blocked">Blocked</string>
+    <string name="offline_error">You must be online to complete this action</string>
+    <string name="target_dialog_got_it">OK, Got it!</string>
+    <string name="block_title">Block %s</string>
+</resources>

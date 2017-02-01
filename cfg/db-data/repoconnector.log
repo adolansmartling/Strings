@@ -14,3 +14,5 @@ create index IDX_REPOSITORY_PATH on resource (repositoryPath)
 alter table resource_locale add constraint FK22A63BAB594E889E foreign key (resource_id) references resource
 alter table revision add constraint FKF074B7DB4FEC7AE6 foreign key (repository_id) references repository
 DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT

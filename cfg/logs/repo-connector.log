@@ -23,3 +23,6 @@
 2017-02-01 09:37:00,580 INFO {RepoConnector.java:174} [--] The health is OK
 2017-02-01 09:37:00,587 INFO {RepositoryFactoryImpl.java:145} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Pooling task is scheduled with cron expression 0 */5 * * * ?
 2017-02-01 09:37:00,590 INFO {RepoConnector.java:176} [--] Periodical tasks are scheduled
+2017-02-01 09:40:00,057 INFO {RepositoryPollingTask.java:74} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is starting...
+2017-02-01 09:40:32,650 INFO {RepositoryPollingTask.java:103} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is completed
+2017-02-01 09:45:00,004 INFO {RepositoryPollingTask.java:74} [f410dbb3c-RepositoryKey[type=GIT,protocol=HTTPS,host=github.com,path=adolansmartling/smartlingtest.git,branch=<null>]-VCS2SMARTLING] Check repository task is starting...

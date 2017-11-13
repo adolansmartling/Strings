@@ -3,6 +3,7 @@
     <string name="change_password_incorrect">The current password you entered is incorrect</string>
     <string name="internet_needed">You need an internet connection to perform this action</string>
     <string name="suggested_users_start">"Similar  "</string>
+    string name="suggested_users_start_test">"This is a test"</string>
     <string name="list_seperator">",  "</string>
     <string name="list_seperator_end">" and  "</string>
     <string name="community_no_suggested_users">No suggested users</string>
